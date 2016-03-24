@@ -1,0 +1,42 @@
+{
+  "name": "peep",
+  "displayName": "Peep",
+  "description": "Quickly toggle between hiding and showing files defined in your projects files.exclude setting.",
+  "version": "0.0.1",
+  "publisher": "nwallace",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natewallace/peep.git"
+  },
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "icon": "images/icon.png",
+  "galleryBanner": {
+		"color": "#99C3D7"
+	},
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.peepAll",
+    "onCommand:extension.peepNone"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.peepAll",
+        "title": "Peep All"
+      },
+      {
+        "command": "extension.peepNone",
+        "title": "Peep None"
+      }
+    ]
+  },
+  "devDependencies": {
+    "vscode": "0.10.x"
+  }
+}
