@@ -22,6 +22,14 @@ function activate(context) {
       });
 	});
 	context.subscriptions.push(peepNone);
+
+  // The peep toggle command
+  var peepToggle = vscode.commands.registerCommand('extension.peepToggle', function () {
+		updateVisibility(null, function (err) {
+        vscode.window.showErrorMessage(err.message);
+      });
+	});
+	context.subscriptions.push(peepToggle);
 }
 
 // updates the visibility of the settings file if there is one
@@ -39,7 +47,11 @@ function updateVisibility(visibility, cb) {
         for (var prop in settings['files.exclude']) {
           if (settings['files.exclude'].hasOwnProperty(prop) &&
               typeof settings['files.exclude'][prop] === 'boolean') {
-            settings['files.exclude'][prop] = !visibility;
+            if (visibility === null) {
+              settings['files.exclude'][prop] = !settings['files.exclude'][prop];
+            } else {
+              settings['files.exclude'][prop] = !visibility;
+            }
           }
         }
         

@@ -2,7 +2,7 @@
   "name": "peep",
   "displayName": "Peep",
   "description": "Quickly toggle between hiding and showing files defined in your projects files.exclude setting.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "nwallace",
   "license": "UNLICENSED",
   "repository": {
@@ -21,7 +21,8 @@
   ],
   "activationEvents": [
     "onCommand:extension.peepAll",
-    "onCommand:extension.peepNone"
+    "onCommand:extension.peepNone",
+    "onCommand:extension.peepToggle"
   ],
   "main": "./extension",
   "contributes": {
@@ -33,6 +34,10 @@
       {
         "command": "extension.peepNone",
         "title": "Peep None"
+      },
+      {
+        "command": "extension.peepToggle",
+        "title": "Peep Toggle"
       }
     ]
   },
