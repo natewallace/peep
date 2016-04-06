@@ -22,6 +22,9 @@ In the file above I have specified that the node_modules, dist, and lib folders 
 you have to do is execute the `Peep None` command which will update the settings file and set the boolean values to true.  To reverse this
 you just need to execute `Peep All` to make them visible again.
 
+You can also execute the `Peep Toggle` command to toggle the current visibility set for each entry in the files.exclude setting
+that has a boolean value.
+
 Note that when this extension is updating the files.exclude property in your settings.json file it will first read in the entire file,
 then update the file.exclude values in memory, and finally write the entire settings back to the file.  This means that any special
 type of formatting or spacing will be lost.
