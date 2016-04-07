@@ -1,6 +1,7 @@
 var vscode = require('vscode');
 var fs = require('fs');
 var path = require('path');
+var json5 = require('comment-json');
 
 // extension is activated the very first time the command is executed
 function activate(context) {
@@ -42,7 +43,7 @@ function updateVisibility(visibility, cb) {
       }
     } else {
       // modifiy visibility of boolean type file exclusions
-      settings = JSON.parse(data);
+      settings = json5.parse(data);
       if (settings['files.exclude']) {
         for (var prop in settings['files.exclude']) {
           if (settings['files.exclude'].hasOwnProperty(prop) &&
@@ -56,7 +57,7 @@ function updateVisibility(visibility, cb) {
         }
         
         // write the updated settings to file
-        fs.writeFile(settingsFile, JSON.stringify(settings, null, 2), function (err) {
+        fs.writeFile(settingsFile, json5.stringify(settings, null, 2), function (err) {
           if (err) {
             if (cb) {
               cb(err);

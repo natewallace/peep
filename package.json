@@ -2,7 +2,7 @@
   "name": "peep",
   "displayName": "Peep",
   "description": "Quickly toggle between hiding and showing files defined in your projects files.exclude setting.",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "publisher": "nwallace",
   "license": "UNLICENSED",
   "repository": {
@@ -14,8 +14,8 @@
   },
   "icon": "images/icon.png",
   "galleryBanner": {
-		"color": "#99C3D7"
-	},
+    "color": "#99C3D7"
+  },
   "categories": [
     "Other"
   ],
@@ -43,5 +43,8 @@
   },
   "devDependencies": {
     "vscode": "0.10.x"
+  },
+  "dependencies": {
+    "comment-json": "^1.1.3"
   }
 }
