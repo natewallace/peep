@@ -2,7 +2,7 @@
   "name": "peep",
   "displayName": "Peep",
   "description": "Quickly toggle between hiding and showing files defined in your projects files.exclude setting.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "nwallace",
   "license": "UNLICENSED",
   "repository": {
